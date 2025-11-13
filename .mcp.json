@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "codex": {
+      "command": "npx",
+      "args": [
+        "-y", "@openai/codex",
+        "-c", "model_provider=\"amd-openai\"",
+        "mcp-server"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest", "--headless"]
+    }
+  }
+}

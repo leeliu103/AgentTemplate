@@ -132,4 +132,3 @@ pip install openai-agents claude-agent-sdk
 
 - [Claude Agent SDK Documentation](https://github.com/anthropics/anthropic-sdk-python)
 - [OpenAI Agents Documentation](https://github.com/openai/openai-agents-python)
-- [AMD LLM Gateway](https://llm-api.amd.com)

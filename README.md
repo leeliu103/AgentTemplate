@@ -151,10 +151,16 @@ This allows you to leverage the Codex agent anywhere without additional configur
 
 ## Next Steps
 
-1. Explore the example agents to understand the SDK usage
-2. Modify the examples to fit your use case
-3. Create your own agents using the provided templates
-4. Use `claude` or `codex` in any of your projects
+1. **Test the SDKs**: Run the example agents to verify your setup and see the SDKs in action
+   ```bash
+   ./run-examples.sh
+   ```
+   This will let you test both Claude Agent SDK and OpenAI Agent SDK examples interactively.
+
+2. Explore the example agents to understand the SDK usage
+3. Modify the examples to fit your use case
+4. Create your own agents using the provided templates
+5. Use `claude` or `codex` in any of your projects
 
 ## Resources
 

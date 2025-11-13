@@ -121,12 +121,40 @@ pip install openai-agents claude-agent-sdk
     └── gpt5-codex.py         # GPT-5 Codex agent example
 ```
 
+## Usage Instructions
+
+### Using Claude Code in Any Project
+
+After running the setup script, you can use `claude` in **ANY project folder** you want.
+
+To enable the 3 common MCP servers (context7, codex, playwright) in your project:
+
+```bash
+cp .mcp.json /path/to/your/project/
+```
+
+Then navigate to your project folder and run:
+
+```bash
+claude
+```
+
+### Using Codex Agent in Any Folder
+
+You can use the Codex agent in **ANY folder** with:
+
+```bash
+codex -c model_provider="amd-openai"
+```
+
+This allows you to leverage the Codex agent anywhere without additional configuration.
+
 ## Next Steps
 
 1. Explore the example agents to understand the SDK usage
 2. Modify the examples to fit your use case
 3. Create your own agents using the provided templates
-4. Copy `.mcp.json` to your projects to use MCP servers
+4. Use `claude` or `codex` in any of your projects
 
 ## Resources
 

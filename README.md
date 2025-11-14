@@ -164,5 +164,5 @@ This allows you to leverage the Codex agent anywhere without additional configur
 
 ## Resources
 
-- [Claude Agent SDK Documentation](https://github.com/anthropics/anthropic-sdk-python)
+- [Claude Agent SDK Documentation](https://github.com/anthropics/claude-agent-sdk-python)
 - [OpenAI Agents Documentation](https://github.com/openai/openai-agents-python)

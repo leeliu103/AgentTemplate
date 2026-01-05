@@ -77,23 +77,25 @@ ENV_EXPORTS="
 export ANTHROPIC_API_KEY=\"\${AMD_LLM_API_KEY}\"
 export ANTHROPIC_CUSTOM_HEADERS=\"Ocp-Apim-Subscription-Key:\${AMD_LLM_API_KEY}\"
 export ANTHROPIC_BASE_URL=\"https://llm-api.amd.com/Anthropic\"
-export ANTHROPIC_MODEL=\"claude-sonnet-4.5\"
+export ANTHROPIC_MODEL=\"claude-opus-4.5\"
 export LLM_GATEWAY_KEY=\"\${AMD_LLM_API_KEY}\"
 "
 
-# Check if already added to shell config
-if ! grep -q "Agent Template - AMD LLM Gateway Configuration" "$SHELL_CONFIG" 2>/dev/null; then
-    echo "$ENV_EXPORTS" >> "$SHELL_CONFIG"
-    echo -e "${GREEN}✓ Environment variables added to $SHELL_CONFIG${NC}"
-else
-    echo -e "${GREEN}✓ Environment variables already present in $SHELL_CONFIG${NC}"
+# Remove existing configuration if present and add new one
+if grep -q "Agent Template - AMD LLM Gateway Configuration" "$SHELL_CONFIG" 2>/dev/null; then
+    echo -e "${YELLOW}Removing existing AMD LLM Gateway Configuration...${NC}"
+    sed -i '/# Agent Template - AMD LLM Gateway Configuration/,/^export LLM_GATEWAY_KEY=/d' "$SHELL_CONFIG"
+    echo -e "${GREEN}✓ Removed existing configuration${NC}"
 fi
+
+echo "$ENV_EXPORTS" >> "$SHELL_CONFIG"
+echo -e "${GREEN}✓ Environment variables added to $SHELL_CONFIG${NC}"
 
 # Export for current session
 export ANTHROPIC_API_KEY="$AMD_LLM_API_KEY"
 export ANTHROPIC_CUSTOM_HEADERS="Ocp-Apim-Subscription-Key:$AMD_LLM_API_KEY"
 export ANTHROPIC_BASE_URL="https://llm-api.amd.com/Anthropic"
-export ANTHROPIC_MODEL="claude-sonnet-4.5"
+export ANTHROPIC_MODEL="claude-opus-4.5"
 export LLM_GATEWAY_KEY="$AMD_LLM_API_KEY"
 
 echo ""

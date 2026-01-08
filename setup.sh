@@ -59,6 +59,12 @@ mkdir -p ~/.codex
 cp codex.config ~/.codex/config.toml
 echo -e "${GREEN}✓ Copied codex.config to ~/.codex/config.toml${NC}\n"
 
+# Copy CLAUDE.md to ~/.claude/
+echo -e "${YELLOW}Setting up Claude code configuration...${NC}"
+mkdir -p ~/.claude
+cp CLAUDE.md ~/.claude/
+echo -e "${GREEN}✓ Copied CLAUDE.md to ~/.claude/${NC}\n"
+
 # Set up environment variables
 echo -e "${YELLOW}Setting up environment variables...${NC}"
 

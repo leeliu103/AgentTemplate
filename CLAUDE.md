@@ -1,0 +1,1 @@
+When the user asks you to use Codex, never change the sandbox_mode setting.

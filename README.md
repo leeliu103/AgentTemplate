@@ -28,6 +28,7 @@ This will automatically:
 - Install `@anthropic-ai/claude-code` globally
 - Install `@openai/codex` globally
 - Copy `codex.config` to `~/.codex/config.toml`
+- Copy `CLAUDE.md` to `~/.claude/`
 - Set up environment variables in your shell configuration
 - Install Python SDKs (`openai-agents` and `claude-agent-sdk`)
 
@@ -53,6 +54,7 @@ This interactive script allows you to run:
 
 - **`.mcp.json`**: MCP server configuration for codex, context7, and playwright
 - **`codex.config`**: Codex configuration for AMD LLM Gateway
+- **`CLAUDE.md`**: Claude Code configuration (copied to `~/.claude/` for all projects)
 
 ### Example Agents
 
@@ -110,6 +112,7 @@ pip install openai-agents claude-agent-sdk
 ```
 .
 ├── .mcp.json                 # MCP server configuration
+├── CLAUDE.md                 # Claude Code configuration
 ├── codex.config              # Codex configuration
 ├── setup.sh                  # Automated setup script
 ├── run-examples.sh           # Interactive example runner

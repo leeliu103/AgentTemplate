@@ -81,7 +81,7 @@ The setup script configures these environment variables:
 - `ANTHROPIC_API_KEY`: Your AMD LLM Gateway key (from `AMD_LLM_API_KEY`)
 - `ANTHROPIC_CUSTOM_HEADERS`: Subscription key header
 - `ANTHROPIC_BASE_URL`: `https://llm-api.amd.com/Anthropic`
-- `ANTHROPIC_MODEL`: `claude-opus-4.5`
+- `ANTHROPIC_MODEL`: `claude-opus-4.6`
 - `LLM_GATEWAY_KEY`: Your AMD LLM Gateway key (from `AMD_LLM_API_KEY`)
 
 ## Customizing Your Agents

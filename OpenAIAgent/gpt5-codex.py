@@ -13,8 +13,8 @@ headers = {
     'Ocp-Apim-Subscription-Key': api_key
 }
 model_api_version = '2025-04-01-preview'
-model_id = 'dvue-aoai-001-gpt-5.3-codex'
-model_name = 'gpt-5.3-codex'
+model_id = 'dvue-aoai-001-gpt-5.4'
+model_name = 'gpt-5.4'
 
 client = AsyncAzureOpenAI(
     api_key='dummy',

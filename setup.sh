@@ -80,6 +80,7 @@ fi
 # Create environment variable exports
 ENV_EXPORTS="
 # Agent Template - AMD LLM Gateway Configuration
+export AMD_LLM_API_KEY=\"${AMD_LLM_API_KEY}\"
 export ANTHROPIC_API_KEY=\"\${AMD_LLM_API_KEY}\"
 export ANTHROPIC_CUSTOM_HEADERS=\"Ocp-Apim-Subscription-Key:\${AMD_LLM_API_KEY}\"
 export ANTHROPIC_BASE_URL=\"https://llm-api.amd.com/Anthropic\"

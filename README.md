@@ -165,6 +165,22 @@ This allows you to leverage the Codex agent anywhere without additional configur
 4. Create your own agents using the provided templates
 5. Use `claude` or `codex` in any of your projects
 
+## Enabling the Codex Plugin in Claude Code
+
+The [Codex plugin for Claude Code](https://github.com/openai/codex-plugin-cc) provides slash commands like `/codex:rescue`, `/codex:review`, and `/codex:setup` inside Claude Code sessions. However, the plugin requires `codex login status` to report as authenticated before it allows any operation.
+
+When using a custom `model_provider` like `amd-openai`, the actual API authentication is handled separately — through `env_http_headers` in `~/.codex/config.toml`, which sends your `LLM_GATEWAY_KEY` as the `Ocp-Apim-Subscription-Key` header. The `codex login status` check is unaware of this and still expects an OpenAI-style credential to be stored.
+
+**Workaround:** Register your AMD LLM Gateway key with the Codex CLI's credential store:
+
+```bash
+echo "$AMD_LLM_API_KEY" | codex login --with-api-key
+```
+
+This stored key is **not used for actual API calls** to the AMD gateway — it only satisfies the plugin's authentication gate. The real authentication continues to flow through the `env_http_headers` configuration in `~/.codex/config.toml`.
+
+> **Note:** This is a workaround for a limitation in the Codex plugin, which assumes OpenAI-style authentication and does not account for custom model providers that handle auth differently. If the Codex CLI or plugin changes how it validates credentials in a future update, this step may need to be revisited.
+
 ## Resources
 
 - [Claude Agent SDK Documentation](https://github.com/anthropics/claude-agent-sdk-python)

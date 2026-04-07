@@ -6,20 +6,32 @@ A starter template for building AI agents using Claude Agent SDK and OpenAI Agen
 
 - **AMD LLM Gateway API Key**: You must have an AMD LLM Gateway API key
 - **Python 3**: Required for running the agent examples
-- **Bash shell**: For running the setup script
+- **Bash shell** (Linux) or **PowerShell 5.1+** (Windows): For running the setup script
 
 ## Quick Start
 
 ### 1. Export your API key
 
+**Linux:**
 ```bash
 export AMD_LLM_API_KEY=<Your Key>
 ```
 
+**Windows (PowerShell):**
+```powershell
+$env:AMD_LLM_API_KEY = "<your_key>"
+```
+
 ### 2. Run the setup script
 
+**Linux:**
 ```bash
 ./setup.sh
+```
+
+**Windows (PowerShell):**
+```powershell
+powershell -ExecutionPolicy Bypass -File .\setup.ps1
 ```
 
 This will automatically:
@@ -95,6 +107,10 @@ Make sure you've exported your API key:
 ```bash
 export AMD_LLM_API_KEY=<Your Key>
 ```
+**Windows (PowerShell):**
+```powershell
+$env:AMD_LLM_API_KEY = "<your_key>"
+```
 
 ### "Python 3 is not installed"
 Install Python 3 for your operating system before running the setup script.
@@ -114,7 +130,8 @@ pip install openai-agents claude-agent-sdk
 ├── .mcp.json                 # MCP server configuration
 ├── CLAUDE.md                 # Claude Code configuration
 ├── codex.config              # Codex configuration
-├── setup.sh                  # Automated setup script
+├── setup.sh                  # Automated setup script (Linux)
+├── setup.ps1                 # Automated setup script (Windows)
 ├── run-examples.sh           # Interactive example runner
 ├── ClaudeAgent/
 │   ├── basic.py              # Basic Claude Agent examples
